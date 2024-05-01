@@ -1,14 +1,47 @@
 <div class="header">
-    <span><i class="bi bi-person-circle"></i></span>
-    <span><i class="bi bi-bell-fill"></i></span>
-    <span><i class="bi bi-envelope-fill"></i></span> 
+  <span><i class="bi bi-person-circle"></i></span>
+  <span><i class="bi bi-bell-fill"></i></span>
+  <span><i class="bi bi-envelope-fill"></i></span>
 </div>
 
 <div class="container-fluid">
-    <div class="container sidebar">
-
+  <div class="container sidebar">
+    <app-navigation></app-navigation>
+  </div>
+  <div class="container main">
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="logoutModal"
+  tabindex="-1"
+  aria-labelledby="logoutModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title text-danger fs-5" id="logoutModalLabel">
+          <i class="bi bi-box-arrow-right me-1"></i>Logout
+        </h1>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <p>Confirm to logout ?</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+          Close
+        </button>
+        <button type="button" class="btn btn-danger">Logout</button>
+      </div>
     </div>
-    <div class="container main">
-        <router-outlet></router-outlet>
-    </div>
+  </div>
 </div>
